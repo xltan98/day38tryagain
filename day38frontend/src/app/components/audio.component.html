@@ -1,0 +1,55 @@
+<!-- <audio controls>
+    <source src="https://xinlitan98.sgp1.digitaloceanspaces.com/{{id}}" type="audio/ogg">
+    
+  </audio> -->
+
+  <!-- <div *ngIf="listOfUrl">
+    <div *ngFor="let url of listOfUrl">
+    <audio controls autoplay>
+      <source [src]="url">
+    </audio>
+    </div>
+  </div> -->
+<!-- 
+  <div *ngIf="listOfUrl && listOfUrl.length > 0">
+    <div *ngFor="let url of listOfUrl">
+      <audio controls>
+        <source [src]="url" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div> -->
+   <!-- <div *ngIf="url; else loading">
+    <audio controls autoplay>
+      <source [src]="url">
+    </audio>
+  </div>
+   -->
+  <!-- <button type="button" [routerLink]="['/']">
+    Back
+  </button>
+  
+  <ng-template #loading>
+    <h3>Loading</h3>
+  </ng-template> -->
+<div *ngFor="let id of listOfId.id">
+ <p> {{id}}</p>
+</div>
+  <div *ngIf="listOfUrl && listOfId.id">
+    <div *ngFor="let url of listOfUrl">
+      <audio controls>
+        <source [src]="url" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+  
+  <button type="button" [routerLink]="['/']">
+    Back
+  </button>
+  
+  <ng-template #loading>
+    <h3>Loading</h3>
+  </ng-template>
+  
+
